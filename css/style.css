@@ -43,8 +43,13 @@ html, body {
 }
 
 .main-header {
-    background-color: red;
-    background-image: url('https://www.databankimx.com/wp-content/uploads/2015/07/Microsoft-Cloud-Offerings.jpg');
+    /* background-color: red; */
+    /* background-image: url('https://www.databankimx.com/wp-content/uploads/2015/07/Microsoft-Cloud-Offerings.jpg'); */
+    /* background-color: #207591; */
+    /* background-color: #2692b5; */
+    /* background-color: #2eafd9; */
+    background-color:#1cc7ed;
+    background-image: url(../assets/IMG_2511.jpg);
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 30px;
@@ -101,10 +106,12 @@ html, body {
 
 .about-prof-image {
     float: left;
-    height: 175px;
-    width: 190px;
+    height: 185px;
+    width: 145px;
     margin: 30px;
     border-radius: 50%;
+    /* max-width: 100%;
+    max-height: 100%; */
 }
 
 .res-element {
@@ -113,7 +120,7 @@ html, body {
 }
 
 .main-footer {
-    background-color: red;
+    background-color: #205e91;
     color: white;
     position: fixed;
     bottom: 0;
