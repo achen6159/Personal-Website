@@ -2,11 +2,12 @@ name: clone workflow
 on: 
   workflow_dispatch:
 jobs:
-  name: Clone
+  clone:
+    name: Clone
     runs-on: ubuntu-latest
     steps:
       - name: testing
-      - ues: actions/checkout@v2
+        uses: actions/checkout@v2
         with: 
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
