@@ -1,17 +1,17 @@
-name: clone workflow
+name: Clone
 on: workflow_dispatch
 jobs:
-  clone:
+  deploy:
     name: Clone
     runs-on: ubuntu-latest
     steps:
-      - name: Remote SSH Commands
-        uses: actions/checkout@v2
-        with: 
-          command: |
-            cd /pub/achen134/
-            rm -rf Personal-Website
-            git clone https://github.com/achen6159/Personal-Website.git
-          host: ${{ secrets.HOST }}
-          user: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+    - name: Remote SSH Commands
+      uses: fifsky/ssh-action@v0.0.6
+      with:
+        command: |
+          cd /pub/achen134/
+          rm -rf Personal-Website
+          git clone https://github.com/achen6159/Personal-Website.git
+        host: ${{ secrets.HOST }}
+        user: ${{ secrets.USERNAME }}
+        pass: ${{ secrets.PASSWORD}}
