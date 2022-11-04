@@ -46,8 +46,8 @@ html, body {
     /* background-color: red; */
     /* background-image: url('https://www.databankimx.com/wp-content/uploads/2015/07/Microsoft-Cloud-Offerings.jpg'); */
     /* background-color: #207591; */
-    /* background-color: #2692b5; */
-    background-color:#1cc7ed;
+    background-color: #2692b5;
+/*     background-color:#1cc7ed; */
     background-image: url(../assets/IMG_2511.jpg);
     background-blend-mode: multiply;
     background-size: cover;
