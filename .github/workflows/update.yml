@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: testing
-        uses: ssh-actions/checkout@v2
+        uses: achen6159/ssh-actions/checkout@v2
         with: 
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
