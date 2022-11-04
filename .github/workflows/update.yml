@@ -1,0 +1,19 @@
+name: update workflow
+on: 
+  push: 
+    branches: [main]
+jobs:
+  update:
+    name: Update
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing
+        uses: actions/checkout@v2
+        with: 
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd Personal-Website
+            git pull
