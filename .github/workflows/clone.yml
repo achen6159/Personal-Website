@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Remote SSH Commands
-        uses: fifsky/ssh-actions@v0.0.6
+        uses: actions/checkout@v2
         with: 
           command: |
             cd /pub/achen134/
