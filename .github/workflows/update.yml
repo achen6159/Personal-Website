@@ -11,7 +11,7 @@ jobs:
       uses: fifsky/ssh-action@v0.0.6
       with:
         command: |
-          cd Personal-Website
+          cd /pub/achen134/
           git pull
         host: ${{ secrets.HOST }}
         user: ${{ secrets.USERNAME }}
