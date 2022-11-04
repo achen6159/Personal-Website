@@ -1,19 +1,18 @@
-name: update workflow
+name: Update
 on: 
   push: 
     branches: [main]
 jobs:
-  update:
+  deploy:
     name: Update
     runs-on: ubuntu-latest
     steps:
-      - name: testing
-        uses: achen6159/ssh-action@master
-        with: 
-          host: ${{ secrets.HOST }}
-          user: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          script: |
-            cd Personal-Website
-            git pull
+    - name: Remote SSH Commands
+      uses: fifsky/ssh-action@v0.0.6
+      with:
+        command: |
+          cd Personal-Website
+          git pull
+        host: ${{ secrets.HOST }}
+        user: ${{ secrets.USERNAME }}
+        pass: ${{ secrets.PASSWORD}}
