@@ -1,18 +1,16 @@
 name: delete workflow
-on: 
-  workflow_dispatch:
+on: workflow_dispatch
 jobs:
-  delete:
+  deploy:
     name: Delete
     runs-on: ubuntu-latest
     steps:
-      - name: testing
-        uses: actions/checkout@v2
-        with: 
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          script: |
-            unalias rm
-            rm -rf Personal-Website
+    - name: Remote SSH Commands
+      uses: fifsky/ssh-action@v0.0.6
+      with:
+        command: |
+          unalias rm
+          rm -rf Personal-Website
+        host: ${{ secrets.HOST }}
+        user: ${{ secrets.USERNAME }}
+        pass: ${{ secrets.PASSWORD}}
