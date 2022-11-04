@@ -11,7 +11,7 @@ jobs:
         uses: achen6159/ssh-actions/checkout@v2
         with: 
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          user: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
