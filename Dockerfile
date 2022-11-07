@@ -21,7 +21,7 @@ WORKDIR /home/node/p5/
 COPY . ./
 USER node
 RUN npm install
-COPY --chown=node:node . .
+#COPY --chown=node:node . .
 
 # running app
 CMD ["node", "app.js"]
