@@ -4,9 +4,9 @@ services:
   nodejs:
     #fill out the configuration here
     build:
-      context: Personal-Website
+      context: .
       dockerfile: Dockerfile
-    image: node-10:alpine
+    image: nodejs
     container_name: nodejs
     restart: unless-stopped
     networks:
@@ -34,7 +34,7 @@ volumes:
     driver_opts:
       type: none
       #fill out your absolute path to your folder here
-      device: /Users/anniechen/Personal-Website
+      device: /Users/anniechen/Personal-Website/
       o: bind
 
 networks:
