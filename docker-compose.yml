@@ -4,7 +4,7 @@ services:
   nodejs:
     #fill out the configuration here
     build:
-      context: .
+      context: Personal-Website
       dockerfile: Dockerfile
     image: node-10:alpine
     container_name: nodejs
