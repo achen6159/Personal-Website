@@ -18,7 +18,8 @@ RUN mkdir -p /home/node/p5/ && chown -R node:node /home/node/p5/
 WORKDIR /home/node/p5/
 
 # installing packages
-COPY . ./USER node
+COPY . ./
+USER node
 RUN npm install
 COPY --chown=node:node . .
 
